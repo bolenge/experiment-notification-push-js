@@ -7,6 +7,8 @@
 
     $app = new Application;
 
+    init_env();
+
     // routers
     $pages = require('./routes/pages.php');
 

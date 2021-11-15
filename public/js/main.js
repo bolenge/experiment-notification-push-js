@@ -1,3 +1,5 @@
+const PUBLIC_KEY = 'BCgVyigy9JqUuaxjh8lCDOxzvPnb7ckQrVCKHEdIiYt4YYkoCYasO-gYQZtDotYGbwLgj6hp7CC3lZRVrkWIEhY'
+
 function main() {
   const permission = document.getElementById('push-permission')
 
@@ -26,9 +28,28 @@ async function askPermission() {
 
 async function registerServiceWorker() {
   const registration = await navigator.serviceWorker.register('/public/js/sw.js')
-  const subscription = await registration.pushManager.getSubscription()
+  let subscription = await registration.pushManager.getSubscription()
 
-  console.log(subscription);
+  if (subscription) {
+    return
+  }
+
+  subscription = await registration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: PUBLIC_KEY
+  })
+
+  console.log('SUBSCRIPTION : ', subscription);
+}
+
+async function getPublicKey() {
+  const { publicKey } = await fetch('/key', {
+    headers: {
+      Accept: 'application/json'
+    }
+  }).then(res => res.json())
+
+  return publicKey
 }
 
 main()
