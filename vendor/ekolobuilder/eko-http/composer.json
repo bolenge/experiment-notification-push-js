@@ -1,0 +1,23 @@
+{
+    "name": "ekolobuilder/eko-http",
+    "description": "Allows you to manage the various http requests and responses and other functionality related to the http protol",
+    "version": "0.0.1",
+    "keywords": ["ekolo", "http", "eko", "request", "response", "post", "body", "get"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don de Dieu BOLENGE",
+            "email": "dondedieubolenge@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ekolobuilder/eko-magic": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ekolo\\Http\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "ekolobuilder/eko-magic",
+    "description": "Module allows to manage magic methods",
+    "version": "0.0.1",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don de Dieu Bolenge",
+            "email": "dondedieubolenge@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ekolo\\EkoMagic\\": "src/"
+        }
+    }
+}

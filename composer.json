@@ -1,0 +1,14 @@
+{
+    "name": "bolenge/experiment-notification-push-js",
+    "description": "Just for learn how to user push notification in javascript",
+    "require": {
+        "ekolobuilder/ekolo": "^0.0.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Don de Dieu Bolenge",
+            "email": "dondedieubolenge@gmail.com"
+        }
+    ]
+}
