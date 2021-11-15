@@ -2,7 +2,8 @@
     "name": "bolenge/experiment-notification-push-js",
     "description": "Just for learn how to user push notification in javascript",
     "require": {
-        "ekolobuilder/ekolo": "^0.0.4"
+        "ekolobuilder/ekolo": "^0.0.4",
+        "minishlink/web-push": "^6.0"
     },
     "license": "MIT",
     "authors": [
